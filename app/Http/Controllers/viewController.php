@@ -20,4 +20,12 @@ class viewController extends Controller
 
         return view('tampil-buku', $data);
     }
+
+    public function updateBuku($id)
+    {
+        $data = [
+            "buku" => buku::find($id),
+        ];
+        return view('update-buku', $data);
+    }
 }
